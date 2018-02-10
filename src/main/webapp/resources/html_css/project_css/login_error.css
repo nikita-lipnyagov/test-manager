@@ -1,0 +1,10 @@
+body{
+    background-image:  url(/resources/images/error401.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1{
+    color: red;
+    margin-left: 25%;
+}

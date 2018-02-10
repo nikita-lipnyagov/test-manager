@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+    <display-name>test_manager</display-name>
+
+    <servlet>
+        <display-name>LoginServlet</display-name>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.epam.lab.pet_project.controllers.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/authorization</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>LogOutServlet</display-name>
+        <servlet-name>LogOutServlet</servlet-name>
+        <servlet-class>com.epam.lab.pet_project.controllers.LogOutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LogOutServlet</servlet-name>
+        <url-pattern>/logOut</url-pattern>
+    </servlet-mapping>
+
+    <!--user servlets-->
+    <servlet>
+        <display-name>TestFilterServlet</display-name>
+        <servlet-name>TestFilterServlet</servlet-name>
+        <servlet-class>com.epam.lab.pet_project.controllers.user_servlets.TestFilterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestFilterServlet</servlet-name>
+        <url-pattern>/user/showTests/filter</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>StartTestServlet</display-name>
+        <servlet-name>StartTestServlet</servlet-name>
+        <servlet-class>com.epam.lab.pet_project.controllers.user_servlets.StartTestServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>StartTestServlet</servlet-name>
+        <url-pattern>/user/showTests/test</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>FinishTestServlet</display-name>
+        <servlet-name>FinishTestServlet</servlet-name>
+        <servlet-class>com.epam.lab.pet_project.controllers.user_servlets.FinishTestServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FinishTestServlet</servlet-name>
+        <url-pattern>/user/showTests/test/finish</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>ShowProfileServlet</display-name>
+        <servlet-name>ShowProfileServlet</servlet-name>
+        <servlet-class>com.epam.lab.pet_project.controllers.user_servlets.ShowProfileServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShowProfileServlet</servlet-name>
+        <url-pattern>/user/showProfile</url-pattern>
+    </servlet-mapping>
+
+    <!--admin servlets-->
+    <servlet>
+        <display-name>BanOrActivateUserServlet</display-name>
+        <servlet-name>BanOrActivateUserServlet</servlet-name>
+        <servlet-class>com.epam.lab.pet_project.controllers.admin_servlets.BanOrActivateUserServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BanOrActivateUserServlet</servlet-name>
+        <url-pattern>/admin/banOrActivateUser</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>CreateTestServlet</display-name>
+        <servlet-name>CreateTestServlet</servlet-name>
+        <servlet-class>com.epam.lab.pet_project.controllers.admin_servlets.CreateTestServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CreateTestServlet</servlet-name>
+        <url-pattern>/admin/createTest</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>CreateQuestionServlet</display-name>
+        <servlet-name>CreateQuestionServlet</servlet-name>
+        <servlet-class>com.epam.lab.pet_project.controllers.admin_servlets.CreateQuestionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CreateQuestionServlet</servlet-name>
+        <url-pattern>/admin/createQuestion</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>CreateAnswerServlet</display-name>
+        <servlet-name>CreateAnswerServlet</servlet-name>
+        <servlet-class>com.epam.lab.pet_project.controllers.admin_servlets.CreateAnswerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CreateAnswerServlet</servlet-name>
+        <url-pattern>/admin/createAnswer</url-pattern>
+    </servlet-mapping>
+
+    <!--filters-->
+    <filter>
+        <filter-name>accessFilter</filter-name>
+        <filter-class>com.epam.lab.pet_project.controllers.AccessFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>accessFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!--resources-->
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/resources/*</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>

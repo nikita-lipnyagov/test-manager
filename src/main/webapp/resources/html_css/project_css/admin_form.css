@@ -1,0 +1,73 @@
+#header {
+    background-color: #4169a7;
+}
+
+#header_text {
+    color: white;
+}
+
+#ban_activate{
+    height: 200px;
+    border: 1px solid black;
+    padding: 15px;
+    margin-top: 5px;
+}
+
+#banButton{
+    margin-left: 10px;
+    width: 150px;
+}
+
+#activateButton{
+    margin-left: 10px;
+    width: 150px;
+}
+
+.info_field{
+    display: none;
+}
+.empty{
+    height: 200px;
+}
+
+#create_test_div{
+    height: 330px;
+    border: 1px solid black;
+    padding: 15px;
+    margin-top: 5px;
+}
+
+#createButton{
+    margin-top: 10px;
+    width: 300px;
+}
+
+#create_question_div{
+    height: 330px;
+    border: 1px solid black;
+    padding: 15px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#createQuestion{
+    margin-top: 50px;
+    width: 300px;
+}
+
+#create_answer_div{
+    height: 330px;
+    border: 1px solid black;
+    padding: 15px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#createAnswer{
+    margin-top: 90px;
+    width: 300px;
+}
+
+#questionName{
+    width: 400px;
+}
